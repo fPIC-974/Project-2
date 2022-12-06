@@ -37,6 +37,7 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
 				if (writer != null) {
 					try {
 						writer.close();
+						return 1;
 					} catch (IOException e) {
 						e.printStackTrace();
 					}
