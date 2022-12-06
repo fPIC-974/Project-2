@@ -3,7 +3,7 @@ package com.hemebiotech.analytics;
 import java.util.*;
 
 public class Symptoms {
-    private List<String> rawList;
+    final List<String> rawList;
 
     /**
      *
@@ -35,10 +35,7 @@ public class Symptoms {
      * @return a sorted map of unique symptoms and their number
      */
     public TreeMap<String, Integer> getSortedSymptoms() {
-
-        TreeMap<String, Integer> sortedSymptoms = new TreeMap<>(this.getUniqueSymptoms());
-
-        return sortedSymptoms;
+        return (new TreeMap<>(this.getUniqueSymptoms()));
     }
 
 }
