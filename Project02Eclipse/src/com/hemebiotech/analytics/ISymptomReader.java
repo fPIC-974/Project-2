@@ -16,5 +16,5 @@ public interface ISymptomReader {
 	 * 
 	 * @return a raw listing of all Symptoms obtained from a data source, duplicates are possible/probable
 	 */
-	List<String> GetSymptoms (); // fPIC : method definition does not use Java naming convention getSymptoms
+	List<String> getSymptoms ();
 }
