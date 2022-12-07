@@ -18,7 +18,11 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 	public ReadSymptomDataFromFile (String filepath) {
 		this.filepath = filepath;
 	}
-	
+
+	/**
+	 *
+	 * @return a raw list of symptoms
+	 */
 	@Override
 	public List<String> getSymptoms() {
 		ArrayList<String> result = new ArrayList<>();
@@ -36,14 +40,14 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 			} catch (FileNotFoundException e) {
 				System.out.println("File not fount : " + filepath);
 			} catch (IOException e) {
-				// sout
+				System.out.println("Unknown error while reading file : " + filepath);
 				e.printStackTrace();
 			} finally {
 				if (reader != null) {
 					try {
 						reader.close();
 					} catch (IOException e) {
-						// sout
+						System.out.println("Unable to close file : " + filepath);
 						e.printStackTrace();
 					}
 				}

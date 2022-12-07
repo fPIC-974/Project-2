@@ -13,16 +13,11 @@ public class AnalyticsCounter {
 		List<String> rawSymptoms = sourceFile.getSymptoms();
 		Symptoms symptoms = new Symptoms(rawSymptoms);
 
-		// Get unique symptoms list
-		// Map<String, Integer> listOfSymptoms = symptoms.getUniqueSymptoms();
-
 		// Get sorted unique symptoms list
 		TreeMap<String, Integer> listOfSortedSymptoms;
 		listOfSortedSymptoms = symptoms.getSortedSymptoms();
 
 		// Write list to output file
-		if (destFile.putSymptoms(listOfSortedSymptoms) == 0) {
-			System.out.println("Unable to write output file");
-		}
+		destFile.putSymptoms(listOfSortedSymptoms);
 	}
 }

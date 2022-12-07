@@ -12,7 +12,6 @@ public interface ISymptomWriter {
 	/**
 	 *
 	 * @param data an ordered list of symptoms
-	 * @return true if successful, false if not
 	 */
-	int putSymptoms (TreeMap<String, Integer> data);
+	void putSymptoms (TreeMap<String, Integer> data);
 }

@@ -14,10 +14,13 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
 	public WriteSymptomDataToFile(String filepath) {
 		this.filepath = filepath;
 	}
-	
-	@Override
 
-	public int putSymptoms(TreeMap<String, Integer> inList) {
+	/**
+	 *
+	 * @param inList an ordered list of symptoms
+	 */
+	@Override
+	public void putSymptoms(TreeMap<String, Integer> inList) {
 		FileWriter writer = null;
 
 		if (filepath != null) {
@@ -31,21 +34,20 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
 				}
 			} catch (FileNotFoundException e) {
 				System.out.println("File not found : " + filepath);
+				e.printStackTrace();
 			} catch (IOException e) {
+				System.out.println("Unknown error while writing results to :" + this.filepath);
 				e.printStackTrace();
 			} finally {
 				if (writer != null) {
 					try {
 						writer.close();
-						return 1;
 					} catch (IOException e) {
+						System.out.println("Unable to close file : " + this.filepath);
 						e.printStackTrace();
 					}
 				}
 			}
 		}
-
-		return 0;
 	}
-
 }
