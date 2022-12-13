@@ -2,6 +2,10 @@ package com.hemebiotech.analytics;
 
 import java.util.*;
 
+/**
+ * Operations on a raw list of symptoms
+ *
+ */
 public class Symptoms {
     final List<String> rawList;
 
@@ -13,6 +17,7 @@ public class Symptoms {
 
 
     /**
+     * Get a list of unique symptoms from raw data
      *
      * @return a map of unique symptoms and their number
      */
@@ -31,6 +36,7 @@ public class Symptoms {
 
 
     /**
+     * Get a sorted list of unique symptoms from raw data
      *
      * @return a sorted map of unique symptoms and their number
      */

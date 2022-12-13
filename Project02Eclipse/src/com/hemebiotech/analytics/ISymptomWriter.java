@@ -10,6 +10,7 @@ import java.util.TreeMap;
  */
 public interface ISymptomWriter {
 	/**
+	 * Write sorted unique list of symptoms to stream
 	 *
 	 * @param data an ordered list of symptoms
 	 */

@@ -7,6 +7,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Implementation to read data from a file
+ *
+ */
 public class ReadSymptomDataFromFile implements ISymptomReader {
 
 	final String filepath;
@@ -20,6 +24,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 	}
 
 	/**
+	 * Read raw symptom data from file
 	 *
 	 * @return a raw list of symptoms
 	 */

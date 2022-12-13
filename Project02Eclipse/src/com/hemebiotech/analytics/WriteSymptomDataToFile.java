@@ -3,6 +3,11 @@ package com.hemebiotech.analytics;
 import java.io.*;
 import java.util.*;
 
+
+/**
+ * Implementation to write data to a file
+ *
+ */
 public class WriteSymptomDataToFile implements ISymptomWriter {
 
 	final String filepath;
@@ -16,6 +21,7 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
 	}
 
 	/**
+	 * Write a list of sorted symptoms (Treemap) to file
 	 *
 	 * @param inList an ordered list of symptoms
 	 */
